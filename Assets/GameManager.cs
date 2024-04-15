@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
 
     public void HomeButton()
     {
-        Debug.Log("home");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Zoo");
     }

@@ -10,7 +10,7 @@ public class Animal : MonoBehaviour
     [SerializeField] TextMeshProUGUI animalCountUI;
     public int animalCount;
     public int animalLimit;
-    //public int animalIndex;
+    //public int animalIndex; 
 
     private GameManager gm;
     //private ZooManager zm;
