@@ -6,13 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ZooManager : MonoBehaviour
 {
-    //public Image[] animal;
-
-    /*private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }*/
-
     public void PlayFarm()
     {
         SceneManager.LoadScene("Farm");
@@ -42,9 +35,4 @@ public class ZooManager : MonoBehaviour
     {
         SceneManager.LoadScene("Forest");
     }
-
-    /*public void AnimalUnlocked(int index)
-    {
-        animal[index].enabled = true;
-    }*/
 }

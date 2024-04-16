@@ -12,8 +12,7 @@ public class HandleUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         infoUI.SetActive(true);
     }
-
-    //Detect when Cursor leaves the GameObject
+    
     public void OnPointerExit(PointerEventData pointerEventData)
     {
         infoUI.SetActive(false);

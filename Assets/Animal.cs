@@ -5,31 +5,28 @@ using TMPro;
 
 public class Animal : MonoBehaviour
 {
-    public BoxCollider2D girdArea;
+    public BoxCollider2D gridArea;
 
     [SerializeField] TextMeshProUGUI animalCountUI;
     public int animalCount;
     public int animalLimit;
-    //public int animalIndex; 
 
-    private GameManager gm;
-    //private ZooManager zm;
+    private GameManager gm;    
 
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
-        //zm = FindObjectOfType<ZooManager>();
         RandomizePosition();
     }
 
     private void RandomizePosition()
     {
-        Bounds bounds = this.girdArea.bounds;
+        Bounds bounds = this.gridArea.bounds;
 
         float x = Random.Range(bounds.min.x, bounds.max.x);
         float y = Random.Range(bounds.min.y, bounds.max.y);
 
-        if (animalCount < animalLimit)
+        if (animalCount < animalLimit && !CollectManager.instance.CheckAllCollected(gameObject.name))
         {
             this.transform.position = new Vector3(Mathf.Round(x), Mathf.Round(y), 0.0f);
         }
@@ -37,8 +34,9 @@ public class Animal : MonoBehaviour
         {
             this.transform.position = new Vector3(100f, 100f);
             gm.animalsRescued++;
-            //zm.AnimalUnlocked(animalIndex);
-            //unlock in zoo and remove from level
+            CollectManager.instance.CollectObject(gameObject.name);
+            animalCount = animalLimit;
+            animalCountUI.text = animalLimit.ToString();
         }
     }
 
