@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Farm.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Zoo.unity
     guid: facfd2397b5addf46a0caeb43e8b61c2
+  - enabled: 1
+    path: Assets/Scenes/Farm.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Arctic.unity
     guid: f145a95c40bcdd943847178da003cb49
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Savanna.unity
     guid: e8a9762b2c02ad448a4ae7499f56ff20
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: a49e937893a4fb745968b08dbfd47c06
   m_configObjects: {}
